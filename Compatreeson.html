@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Compatreeson a0.0.0.0_00.1</title>
+		<meta charset="UTF-8">
+		<script>
+			var energy = 0;
+		</script>
+		<style>
+			body {background-color: #000;}
+			span {color: #fff;}
+		</style>
+	</head>
+	<body>
+		<div id="a" style="margin-right: 90%;">
+			<span>α0.0.0.0_00.1</span>
+		</div>
+		<div id="b" style="margin-left: 10%; margin-right: 10%; text-align: center;">
+			<span style="font-size: 30px;">You Have </span>
+			<span id="Big" style="font-size: 50px;">0</span>
+			<span style="font-size: 50px;"> eV</span>
+			<span>Energy</span><br>
+			<button id="p1nc" onclick="energy += 1; document.getElementById('Big').innerHTML = energy;" style="background-color: #ff0000;">
+				<span>Increase Your Energy By 1 Electron Volt</span>
+			</button><br><br><br>
+		</div>
+		<div id="c" style="text-align: center;">
+			<button onclick="document.getElementById('a').style.display=('none'); document.getElementById('b').style.display=('none'); document.getElementById('c').style.display=('none'); document.getElementById('d').style.display=('block'); document.getElementById('e').style.display=('block'); document.getElementById('f').style.display=('block'); document.getElementById('m_gain').innerHTML = Math.floor(Math.sqrt(energy / 2)); document.getElementById('m_pts').innerHTML = ((Math.floor(Math.sqrt(energy / 2)) + 1) ** 2) * 2;" style="background-color: black; border-color: white; border-radius: 50%; color: #ffffff; font-size: 40px; height: 100px; width: 100px;">DM</button>
+		</div>
+		<div id="d" style="display: none; text-align: left;">
+			<button onclick="document.getElementById('a').style.display=('block'); document.getElementById('b').style.display=('block'); document.getElementById('c').style.display=('block'); document.getElementById('d').style.display=('none'); document.getElementById('e').style.display=('none'); document.getElementById('f').style.display=('none');" style="background-color: black; border-radius: 50%; color: #ffffff;">&lt;</button>
+		</div>
+		<div id="e" style="display: none; text-align: center;">
+			<span style="font-size: 30px;">You Have </span>
+			<span id="m_dm" style="font-size: 50px;">0</span>
+			<span id="m_unit" style="font-size: 50px;"> vg</span>
+			<span style="font-size: 30px;"> Dark Matter</span><br><hr>
+		</div>
+		<div id="f" style="display: none; text-align: center;">
+			<button onclick="document.getElementById('m_dm').innerHTML = parseInt(document.getElementById('m_dm').innerHTML) + Math.floor(Math.sqrt(energy / 2)); energy = 0; document.getElementById('Big').innerHTML = 0; document.getElementById('m_gain').innerHTML = 0; document.getElementById('m_pts').innerHTML = 2;" style="background-color: black; border-color: white; color: #ffffff;">
+				<span style="font-size: 20px;">Do a Mass-Energy Convert to gain </span>
+				<span id="m_gain" style="font-size: 30px;">0</span>
+				<span id="m_unit_gain" style="font-size: 30px;"> vg</span>
+				<span style="font-size: 20px;">Dark Matter</span><br>
+				<span style="font-size: 20px;">Next: </span>
+				<span id="m_pts" style="font-size: 30px;">2</span>
+				<span style="font-size: 20px;"> eV Energy</span>
+			</button><br>
+			<button onclick="document.getElementById('m_gain').innerHTML = Math.floor(Math.sqrt(energy / 2)); document.getElementById('m_pts').innerHTML = ((Math.floor(Math.sqrt(energy / 2)) + 1) ** 2) * 2;">Refresh</button>
+		</div>
+		<script src=""></script>
+	</body>
+</html>
