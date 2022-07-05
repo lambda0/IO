@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Comp</title>
+    <style>
+        body{
+            background-color: #6cf;
+            height: 100%;
+        }
+        #a{
+            position: fixed;
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: dimgray;
+            color: yellow;
+            border-radius: 15px;
+            width: 250px;
+            height: 67px;
+        }
+        #b{
+            margin-top: 100px;
+            margin-left: 20px;
+        }
+        #c{
+            display: none;
+        }
+        .stats{
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        .playtime{
+            font-weight: 750;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <h2>&emsp;<span class="virtual_coin_num">0</span> VC</h2>
+    </div><br>
+    <div id="b">
+        <button class="stats" style="font-size: 15px;" onclick="MainToStats(); DisplayPlayTime();">Stats</button>
+    </div>
+    <div id="c">
+        <button onclick="StatsToMain();">Back to main page</button><br><br>
+        Merge Comp Indev 0.0.0.1_838CEF54<br>By lambda0<br><br>
+        You have played this game for:<br>
+        <span class="playtime playtime_year">0</span> years,
+        <span class="playtime playtime_month">0</span> months,
+        <span class="playtime playtime_day">0</span> days,
+        <span class="playtime playtime_hour">0</span> hours,
+        <span class="playtime playtime_minute">0</span> minutes,
+        <span class="playtime playtime_second">0</span> seconds,
+        and <span class="playtime playtime_milli">0</span> milliseconds.
+        <br><br>
+        <h3>Credit:</h3>
+        <h4>Inspiration:</h4>
+        EasyCat's Mine Merge<br>
+        Veprogame's Idle Mine:Remix<br>
+        <h4>Objects:</h4>
+        <a href="https://www.bilibili.com/video/BV1s3411E7Pg">MicoMorrr's Largest Universe Size Comparison 5.0 Part 1</a><br>
+        <h3>Changelog:</h3>
+        <h4>Indev 0.0.0.0_162A</h4>
+        <p>Create the game.</p>
+        <p>Added the "Stats" page.</p>
+        <h4>Indev 0.0.0.1_1ABC</h4>
+        <p>Added Changelog.</p>
+        <p>Added the 2nd language "<a href="">Chinese</a>".</p>
+    </div>
+</body>
+<script src="../js/game.js"></script>
+</html>
